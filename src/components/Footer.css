@@ -6,9 +6,8 @@ footer {
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 	display: flex;
 	align-items: center;
-	position: absolute;
-	bottom: 0;
 	justify-content: space-around;
+	margin-top: 40px;
 }
 
 .link-styles {
