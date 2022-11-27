@@ -15,6 +15,7 @@ const HomeScreen = () => {
       .get(`${url}/recipes`)
       .then((res) => {
         setRecipes(res.data)
+        console.log(res.data)
       })
   }
 
@@ -29,7 +30,7 @@ const HomeScreen = () => {
         return title.includes(searchParams)
     })
     .map((recipe, index) => {
-        return <RecipeCard recipe={recipe}/>
+        return <RecipeCard recipe={recipe} key={recipe.recipe_id}/>
     })
 
   return (
