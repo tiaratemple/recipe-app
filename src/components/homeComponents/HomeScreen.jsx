@@ -1,9 +1,9 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import RecipeCard from '../RecipeCard';
+import RecipeCard from '../RecipeCard/RecipeCard.jsx';
 import AdBanner from './AdBanner';
 import { BsSearch } from "react-icons/bs";
-
+import "./Homescreen.css"
 const HomeScreen = () => {  
   const [recipes, setRecipes] = useState([])
   const url = "https://recipes.devmountain.com"
@@ -15,7 +15,6 @@ const HomeScreen = () => {
       .get(`${url}/recipes`)
       .then((res) => {
         setRecipes(res.data)
-        console.log(res.data)
       })
   }
 
@@ -47,7 +46,9 @@ const HomeScreen = () => {
             />
           </span>
         </div>
-      <RecipeCard />
+        <div className='recipe-display-container'>
+          {recipeDisplay}
+        </div>
     </div>
   )
 }
